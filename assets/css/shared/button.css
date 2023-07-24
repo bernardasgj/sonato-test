@@ -1,0 +1,16 @@
+.btn 
+{
+    background-color: var(--theme-color);
+    padding: 10px 40px;
+    font-size: 15px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition-duration: 100ms;
+}
+
+.btn:hover
+{
+    background-color: var(--active-color);
+}

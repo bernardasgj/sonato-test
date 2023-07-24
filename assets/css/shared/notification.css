@@ -1,0 +1,33 @@
+.notification {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    width: 100%;
+}
+
+/* Styling for the notification icon */
+.notification i.material-icons {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+/* Success notification */
+.notification.success {
+    border-color: #4caf50;
+    background-color: #dff0d8;
+}
+
+/* Error notification */
+.notification.error {
+    border-color: #f44336;
+    background-color: #f2dede;
+}
+
+/* Info notification */
+.notification.info {
+    border-color: #2196f3;
+    background-color: #d9edf7;
+}

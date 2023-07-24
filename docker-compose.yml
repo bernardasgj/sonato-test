@@ -1,0 +1,43 @@
+version: '3.8'
+services:
+    php-apache-environment:
+        container_name: php-apache
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        depends_on:
+            - db
+            - mailhog 
+        volumes:
+            - ./:/var/www/html/
+        ports:
+            - 8000:80
+    db:
+        container_name: db
+        image: mysql
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: insecuredevpassword
+            MYSQL_DATABASE: sonaro
+            MYSQL_USER: sonaro
+            MYSQL_PASSWORD: insecuredevpassword
+        ports:
+            - "9906:3306"
+        volumes:
+            - ./data/initial_data.sql:/docker-entrypoint-initdb.d/initial_data.sql
+
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        ports:
+            - '8080:80'
+        restart: always
+        environment:
+            PMA_HOST: db
+        depends_on:
+            - db
+
+    mailhog:
+        image: mailhog/mailhog
+        ports:
+            - "8025:8025"
+            - "1025:1025" 

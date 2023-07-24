@@ -1,0 +1,74 @@
+.page-index 
+{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    width: 80%;
+    margin: 0 10%;
+    background-color: var(--container-color);
+    margin-top: 50px;
+}
+
+.page-index .header
+{
+    justify-content: center;
+    display: flex;
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+.page-index .empty-text
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.page-index .loadable-content
+{
+    position: relative;
+}
+
+.page-index .loadable-content .table-container 
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--container-color);
+    margin-bottom: 20px;
+}
+
+.page-index .loadable-content .table-container .table-row 
+{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.page-index .loadable-content .table-container .table-row:first-child
+{
+    border: none;
+}
+
+.page-index .loadable-content .table-container .table-cell 
+{
+    flex: 1;
+    justify-content: center;
+    padding: 15px 0;
+    display: flex;
+}
+
+.page-index .loadable-content .table-container .header 
+{
+    font-weight: bold;
+    background-color: #f0f0f0;
+}
+
+.page-index .search-container .search-input-container
+{
+    width: 95%;
+    padding: 0;
+    border: 1px solid grey;
+    display: flex;
+}

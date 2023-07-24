@@ -1,0 +1,57 @@
+.page-register {
+    width: 40%;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    background-color: var(--container-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+}
+
+.page-register .header {
+    margin: 20px;
+    color: black;
+    padding: 20px;
+    justify-content: center;
+    background-color: var(--container-color);
+    font-weight: 200;
+    font-size: 24px;
+}
+.page-register form
+{
+    width: 100%;
+}
+
+.page-register .btn.submit {
+    background-color: var(--theme-color);
+    margin: 40px 0;
+}
+
+.page-register .btn.submit:hover {
+    background-color: var(--active-color);
+}
+
+/* Mobile styles for login page */
+@media only screen and (max-width: 768px) {
+    .page-register {
+        width: calc(100% - 20px);
+        padding: 10px 20px;
+        flex: 1; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .page-register .header {
+        font-size: 20px;
+        margin: 20px;
+    }
+
+    .page-register .btn {
+        margin: 20px 20px;
+    }
+}

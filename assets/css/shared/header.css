@@ -1,0 +1,134 @@
+.component-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--theme-color);
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+}
+
+.component-header a {
+    text-decoration: none;
+    color: white;
+}
+
+.component-header a.title {
+    margin-left: 20px;
+}
+
+.component-header .header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.component-header .header-icons i {
+    font-size: 20px;
+    margin-right: 20px;
+    color: #fff;
+}
+
+.component-header .popup-content 
+{
+    position: absolute;
+    overflow: hidden;
+    background-color: #ffffff;
+    display: none;
+    color: black;
+    top: 30px;
+    z-index: 100;
+    padding-top: 10px;
+    background-color: transparent;
+}
+
+.component-header .popup-content .container
+{
+    position: relative;
+    background-color: #ffffff;
+}
+
+.component-header .popup-content .container::before {
+    content: "";
+    position: absolute;
+    bottom: 100%; /* Placing it above the element */
+    right: 10px; /* Adjust this value to position the arrow */
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent #ffffff transparent; /* Transparent border on three sides and white on top to create the arrow */
+  }
+
+.component-header .popup-content.poke-list
+{
+    min-width: 210px;
+    right: 90px;
+}
+
+.component-header .popup-content.poke-list .container
+{
+    height: 237px;
+}
+
+.component-header .popup-content.poke-list .empty-poke-message
+{
+    display: flex;
+    padding: 20px 0;
+    width: 100%;
+    justify-content: center;
+}
+
+.component-header .popup-content.poke-list a
+{
+    display: block; 
+    color: black;
+    padding: 10px;
+    margin: 0;
+    text-align: right;
+}
+
+.component-header .popup-content.poke-list.no-height .container
+{
+    height: auto;
+}
+
+.component-header .popup-content.poke-list .item 
+{
+    padding: 10px;
+    border-bottom: 1px solid grey;
+}
+
+.component-header .popup-content.user-menu
+{
+    right: 50px;
+}
+
+.component-header .popup-content.user-menu ul 
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.component-header .popup-content.user-menu li 
+{
+    padding: 10px;
+    cursor: pointer;
+    color: black;
+}
+
+.component-header .popup-content.user-menu li:hover 
+{
+    background-color: #f0f0f0;
+}
+
+.component-header .header-icons i.active:hover {
+    color: var(--active-color);
+    cursor: pointer;
+}
+
+/* Mobile styles for login page */
+@media only screen and (max-width: 767px) {
+    .header {
+        margin: 0;
+    }
+}
+

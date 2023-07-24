@@ -1,0 +1,43 @@
+
+:root {
+    --theme-color: #4381E6;
+    --container-color: #FFFFFF;
+    --background-color: #E5E5E5;
+    --active-color: #ffcc00;
+
+    --hover-transition: 200ms;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body
+{
+  background-color: var(--background-color);
+}
+
+.wrapper
+{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper
+{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile styles for login page */
+@media only screen and (max-width: 767px) {
+  .wrapper
+  {
+    height: calc(100vh + 20px);
+  }  
+}

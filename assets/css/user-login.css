@@ -1,0 +1,76 @@
+.page-login {
+    width: 35%;
+    padding: 20px;
+    background: white;
+    background-color: var(--container-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.page-login .header {
+    margin: 40px;
+    color: black;
+    padding: 20px;
+    justify-content: center;
+    background-color: var(--container-color);
+    font-weight: 100;
+    font-size: 24px;
+}
+
+.page-login .input-group {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.page-login .input-group input {
+    max-width: 295px;
+    width: 100%;
+}
+
+.page-login .btn {
+    margin: 40px 5px;
+}
+
+.page-login .btn.submit {
+    background-color: green;
+}
+
+.page-login .btn.submit:hover {
+    background-color: var(--active-color);
+}
+
+.page-login .btn.register {
+    background-color: var(--theme-color);
+}
+
+.page-login .btn.register:hover {
+    background-color: var(--active-color);
+}
+
+/* Mobile styles for login page */
+@media only screen and (max-width: 768px) {
+    .page-login {
+        margin-top: 0px;
+        width: 100%;
+        padding: 10px;
+        flex-grow: 1;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .page-login .header {
+        font-size: 20px; /* Decrease font size for header */
+        margin: 20px; /* Reduce margin for smaller screens */
+    }
+
+    .page-login .btn {
+        margin: 20px 5px; /* Reduce margin for buttons */
+    }
+}
